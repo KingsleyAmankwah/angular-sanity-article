@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { SanityService } from '../service/sanity.service';
 import { Router } from '@angular/router';
 import { Post } from '../models/post.model';
@@ -12,7 +12,7 @@ import { LoaderComponent } from '../loader/loader.component';
   imports: [BlockContentToTextPipe, CommonModule, LoaderComponent],
   templateUrl: './posts.component.html',
 })
-export class PostsComponent {
+export class PostsComponent implements OnInit {
   private readonly sanityService = inject(SanityService);
   private readonly router = inject(Router);
 
