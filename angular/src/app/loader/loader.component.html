@@ -1,0 +1,61 @@
+@switch (type()) {
+
+<!-- Post List Skeleton -->
+@case ("post-list") {
+<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 animate-pulse">
+  @for (item of [1, 2, 3 ,4, 5, 6]; track $index) {
+  <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+    <div class="h-48 bg-gray-200 w-full"></div>
+    <div class="p-5 space-y-3">
+      <div class="h-6 bg-gray-200 w-3/4 rounded"></div>
+      <div class="h-4 bg-gray-100 w-full rounded"></div>
+      <div class="h-4 bg-gray-100 w-5/6 rounded"></div>
+      <div class="flex gap-2 mt-2">
+        <div class="h-5 w-16 bg-gray-200 rounded-full"></div>
+        <div class="h-5 w-20 bg-gray-200 rounded-full"></div>
+      </div>
+      <div class="flex items-center gap-2 pt-4">
+        <div class="w-8 h-8 bg-gray-300 rounded-full"></div>
+        <div class="h-4 w-24 bg-gray-200 rounded"></div>
+        <div class="ml-auto h-6 w-20 bg-blue-200 rounded-full"></div>
+      </div>
+    </div>
+  </div>
+  }
+</div>
+
+}
+<!-- Post Details Skeleton -->
+@case ("post-details") {
+<div class="max-w-4xl mx-auto px-4 py-12 animate-pulse">
+  <div class="w-full h-96 bg-gray-200 rounded-xl mb-8"></div>
+  <div class="h-8 bg-gray-200 w-3/4 rounded mb-4"></div>
+  <div class="flex items-center justify-between mb-6">
+    <div class="flex items-center gap-2">
+      <div class="w-8 h-8 bg-gray-300 rounded-full"></div>
+      <div class="h-4 w-24 bg-gray-200 rounded"></div>
+    </div>
+    <div class="h-4 w-20 bg-gray-200 rounded"></div>
+  </div>
+  <div class="flex flex-wrap gap-2 mb-6">
+    <div class="h-6 w-16 bg-gray-200 rounded-full"></div>
+    <div class="h-6 w-20 bg-gray-200 rounded-full"></div>
+  </div>
+  <div class="space-y-3">
+    <div class="h-4 w-full bg-gray-100 rounded"></div>
+    <div class="h-4 w-5/6 bg-gray-100 rounded"></div>
+    <div class="h-4 w-2/3 bg-gray-100 rounded"></div>
+  </div>
+  <div class="mt-12 border-t pt-6">
+    <div class="h-6 w-40 bg-gray-200 mb-4 rounded"></div>
+    <div class="flex items-center gap-4">
+      <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
+      <div class="space-y-2">
+        <div class="h-4 w-32 bg-gray-200 rounded"></div>
+        <div class="h-3 w-48 bg-gray-100 rounded"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+} }
