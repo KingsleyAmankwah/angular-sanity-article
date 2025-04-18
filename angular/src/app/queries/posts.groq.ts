@@ -9,8 +9,17 @@ export const getAllPostsQuery = `
     }
   },
   author->{
-    name
+    name,
+    image{
+    asset->{
+       url
+      }
+    }
   },
+    categories[]->{
+      title,
+      description
+    },
   publishedAt,
   body[0]
 } | order(publishedAt desc)
@@ -29,6 +38,7 @@ export const getPostBySlugQuery = (slug: string) => `
   },
   author->{
     name,
+    bio,
     image {
       asset->{
         url
