@@ -96,5 +96,5 @@ Read the step-by-step article here:
 👉 How to Integrate Sanity CMS with Angular
 
 ```
-
+[![Read Article on Dev.to](https://img.shields.io/badge/Read%20Article-Dev.to-black)](https://dev.to/kingsley/how-to-integrate-sanity-cms-with-angular-4i74) 
 ```
