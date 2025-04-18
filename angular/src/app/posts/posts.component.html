@@ -1,0 +1,55 @@
+<div class="max-w-7xl mx-auto px-4 py-10">
+  @if (isLoading()) {
+  <app-loader [type]="'post-list'" />
+  }@else {
+  <h2 class="text-3xl font-bold mb-6 text-gray-800">Latest Posts</h2>
+  <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    @for (post of posts(); track post._id) {
+    <div
+      class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+    >
+      <img
+        [src]="post.mainImage?.asset?.url"
+        alt="{{ post.title }}"
+        class="h-48 w-full object-cover"
+      />
+
+      <div class="p-5">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+          {{ post.title }}
+        </h3>
+
+        <p class="text-gray-600 text-sm mb-3">
+          {{ post.body | blockContentToText : 100 }}
+        </p>
+
+        <div class="flex flex-wrap gap-2 mt-4">
+          @for (category of post.categories; track $index) {
+          <span
+            class="bg-gray-200 text-gray-800 text-xs px-3 py-1 rounded-full"
+          >
+            {{ category.title }}
+          </span>
+          }
+        </div>
+
+        <div class="flex items-center gap-2 mt-4">
+          <img
+            [src]="post.author.image?.asset?.url"
+            alt="{{ post.author.name }}"
+            class="w-8 h-8 rounded-full object-cover"
+          />
+          <span class="text-gray-700 text-sm">By {{ post.author.name }}</span>
+
+          <a
+            (click)="navigateToPostBySlug(post.slug.current)"
+            class="bg-blue-400 text-white text-sm ml-auto px-3 py-1 rounded-full cursor-pointer"
+            >Read more...</a
+          >
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+  }
+</div>
