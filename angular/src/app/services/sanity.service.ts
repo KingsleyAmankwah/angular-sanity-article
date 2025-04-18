@@ -12,6 +12,7 @@ export class SanityService {
       return await client.fetch(getAllPostsQuery);
     } catch (error) {
       console.log(error);
+      throw error;
     }
   }
 
