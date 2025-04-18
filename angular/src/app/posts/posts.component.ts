@@ -1,5 +1,5 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
-import { SanityService } from '../service/sanity.service';
+import { SanityService } from '../services/sanity.service';
 import { Router } from '@angular/router';
 import { Post } from '../models/post.model';
 import { BlockContentToTextPipe } from '../pipe/block-content-to-text.pipe';

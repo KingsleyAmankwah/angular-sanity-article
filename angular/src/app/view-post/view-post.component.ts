@@ -1,10 +1,10 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
-import { SanityService } from '../service/sanity.service';
+import { SanityService } from '../services/sanity.service';
 import { Post } from '../models/post.model';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { BlockContentToTextPipe } from '../pipe/block-content-to-text.pipe';
-import { LoaderComponent } from "../loader/loader.component";
+import { LoaderComponent } from '../loader/loader.component';
 
 @Component({
   selector: 'app-view-post',
